@@ -1,0 +1,54 @@
+.contact_form {
+  font-size: 16px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  color: #fff;
+  margin: 10px;
+  text-align:center;
+}
+
+.contact_form > * {
+  display: inline-block;
+  text-align:left;
+  padding: 10px;
+  width: 80vw
+}
+
+input[type=submit] {
+  width: 100%;
+  text-align:center;
+  margin: auto;;
+  /* Remove default styling */
+  padding: 0px;
+  border: 0;
+  outline:none;
+}
+
+input[type=text] {
+  width:100%;
+}
+
+input[type=email] {
+  width:100%;
+}
+
+label[for=radio] {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+textarea {
+  width: 80vw;
+  height: 20vh;
+}
+
+@media only screen and (min-width: 550px) {
+  .contact_form > * {
+    width: 50vw
+  }
+  
+  textarea {
+  width: 50vw;
+  height: 20vh;
+}
+}

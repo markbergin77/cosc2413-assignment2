@@ -1,0 +1,66 @@
+body {
+    background-color: #fff;
+}
+
+.container {
+    display:block;
+}
+
+.card_basic_container {
+  display:block;
+  text-align: center;
+}
+
+.card_basic_content {
+    width: auto;
+    background-color: #fff;
+    height: auto;
+    border: dotted 1px rgba(0,0,0,0.65);
+    padding: 5px;
+    box-shadow: none;
+    display: inline-block;
+    
+}
+
+td:nth-child(even) {
+    text-align:right;
+}
+    
+table {
+    width: 95%;
+    text-align:left;
+    font-size: .8em;
+    font-family: 'roboto' sans-serif;
+}
+
+.image_wrapper {
+    text-align: center;
+}
+
+.card_basic_header {
+    box-shadow:none;
+    font-size: 1em;
+}
+
+.ticket_cinema_name {
+    font-size: 0.7em;
+    font-family: 'lobster' cursive;
+}
+
+.ticket_address {
+    font-size: 0.5em;
+}
+
+img {
+    width:100px;
+}
+
+@media only screen and (max-width: 550px) {
+img {
+    width:auto;
+}
+
+.card_basic_content {
+    width: 100%;
+}
+}

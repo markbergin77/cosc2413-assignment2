@@ -1,0 +1,39 @@
+/* http://codepen.io/iraycd/pen/dHrxv */
+.btn {
+  text-decoration:none;
+  display: block;
+  position: relative;
+  width: 80%;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 2px;
+  font-size: 0.9em;
+  background-color: #fff;
+  color: #646464;
+  font-family: "Roboto Slab", serif;
+}
+
+.btn.green {
+  background-color: #0f9d58;
+  color: #fff;
+}
+
+.btn.red {
+  background-color: #db4437;
+  color: #fff;
+}
+
+.btn.raised {
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.2s;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.btn.raised:active {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+  transition-delay: 0s;
+}
+
+.btn.disabled {
+  background-color: #646464;
+}

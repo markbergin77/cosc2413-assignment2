@@ -1,0 +1,96 @@
+/* adapted from http://codepen.io/anon/pen/QwPVNW */
+
+table {
+    border-collapse: collapse;
+    width:100%;
+    text-align: center;
+}
+
+tr {
+    display: block;
+}
+
+td:not(:empty):nth-child(2n) {
+    background: #525252;
+}
+
+td:first-child {
+    font-family: "Roboto Slab", serif;
+    background:rgba(0,0,0,0.65);
+    text-align: center;
+}
+
+td {
+    text-align:right;
+    display: block;
+    padding: 10px;
+    font-family: "Roboto", sans-serif;   
+    color: #fff;
+    font-size: .8em;
+}
+
+td:empty {
+    display:none;
+}
+
+td::before {
+    text-align:left;
+    content: attr(data-label);
+    float:left;
+    font-family: "Roboto", sans-serif;
+    width: 50%;
+}
+
+
+
+th {
+    display: none;
+}
+
+.card_basic_header {
+    text-align:center;
+}
+
+.card_basic_header th {
+    font-weight:normal;
+}
+
+/* 550px because that is when the full table displays cleanly
+ * otherwise the headers flow onto 3 lines */
+@media only screen and (min-width: 550px) {
+    td {
+        display: table-cell;
+        text-align: center;
+    }
+    
+    td:empty {
+        display: table-cell;
+    }
+    
+    tr {
+        display: table-row;
+    }
+    
+    td::before {
+        display: none;
+    }
+    
+    th {
+        display: table-cell;
+        background: rgba(0,0,0,0.65);
+        width: 25%;
+    }
+    
+    td:first-child {
+        font-family: "Roboto", sans-serif;
+        background:none;
+    }
+    
+    tr:nth-child(odd) {
+        background: #525252;
+    }
+    
+    td:not(:empty):nth-child(2n) {
+        background: none;
+    }
+}

@@ -1,0 +1,144 @@
+html {
+  height: 100%; 
+}
+
+body {
+  background: #303030;
+  background-size: cover;
+}
+
+header {
+  transition: all 500ms ease-in-out;
+  width: 100%;
+  text-align: center;
+  background: #000;
+  z-index: 2;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+}
+
+nav {
+  background: #212121;
+  opacity:0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  z-index: 3;
+  position: absolute;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+nav.active {
+  opacity:1;
+  /* 87vh to match container size */
+  height: 7em;
+  width: 9em;
+}
+
+nav li:hover {
+  background-color: #424242;
+  width:100%;
+}
+
+nav a {
+  display:inline-block;
+  font-size: 1.5em;
+  margin-left: 10px;
+  font-family: "Roboto Slab" serif;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display:flex;
+  justify-content:center;
+  width: 100%;
+  /* 87vh to allow space for header and footer */
+  min-height: 83vh;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+footer {
+  display: flex;
+  transition: all 500ms ease-in-out;
+  width: 100%;
+  background: #000;
+  z-index: 2;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  color: #fff;
+  padding: 5px 0 5px 0;
+}
+
+footer .footer_text {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1em;
+}
+
+/* Use flex to line up footer elements:
+ * the address is pinned to the start of  the flex box, the student numbers are
+ * pinned to the left using margin-left:auto */
+
+footer .address {
+  align-self: flex-start;
+  margin-left: 15px;
+}
+
+footer .student_numbers {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+@media only screen and (min-width: 400px) {
+  
+}
+
+@media only screen and (min-width: 800px) {
+  
+}
+
+@media only screen and (min-width: 1200px) {
+
+    nav {
+    position: relative;
+    text-align: center;
+    opacity:1;
+    height: auto;
+    width: 100%;
+  }
+  
+  nav li {
+    display: inline-block;
+    width:30%;
+  }
+  
+  nav li:hover {
+    width:auto;
+    width:30%;
+  }
+  
+    nav.active {
+      height:auto;
+      width:100%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+
+}

@@ -1,0 +1,13 @@
+video {
+  position: relative;
+  width: 95%;
+  height: auto;
+  margin:15px;
+}
+/* NEED TO FIX SIZE ON LARGER SCREENS */
+@media only screen and (min-width: 800px) {
+  video {
+    width: 45%;
+    height: auto;
+  }
+}

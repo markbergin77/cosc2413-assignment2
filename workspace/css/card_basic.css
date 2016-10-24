@@ -1,0 +1,73 @@
+/* Use when you just want 1 big card to be the body */
+.card_basic_body {
+  height:100%;
+  /* TODO TESTING AUTOSIZED CARDS */
+  width:100%;
+  z-index: 1;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: .5rem .5rem .5rem;
+  background-color: #424242;
+}
+
+/* For multiple static cards */
+.card_basic_content {
+  box-sizing: border-box;
+  display:flex;
+  flex-flow: column;
+  height: 100vh;
+  z-index: 1;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: .5rem .5rem .5rem;
+  background-color: #424242;
+}
+
+.card_basic_header {
+  box-sizing:border-box;
+  width: 100%;
+  text-align: left;
+  padding-left: 2%;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5em;
+  z-index: 2;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card_basic_container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width:100%;
+  justify-content: center;
+}
+
+.card_basic_text {
+  height: 68%;
+  margin: 10px;
+  text-align: left;
+  color: #fff;
+  font-size: .8em;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 400px) {
+  
+}
+
+@media only screen and (min-width: 800px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .card_header {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+
+}

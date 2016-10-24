@@ -1,0 +1,160 @@
+/* Card Styling */
+.card_container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width:100%;
+  justify-content: center;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  height:50%;
+  margin: .5rem .5rem .5rem;
+  position: relative;
+  text-align: center;
+  min-width: calc(100% - 1rem);
+  min-height: 300px;
+}
+
+.news {
+  flex-direction: column;
+  height: auto;
+  min-height:0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: .5rem .5rem .5rem;
+  background-color: #424242;
+}
+
+.card_front,
+.card_back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* Why put the z-index and box-shadow here, you may be wondering....
+   * Because when the card flips the box-shadow remains in the background and
+   * it looks weird and I like to keep the z-index with the shadow */
+  z-index: 1;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 700ms;
+  overflow: auto;
+  background-color: #424242;
+}
+
+.card_back {
+  transform: rotateX(-180deg);
+}
+
+.card_text {
+  height: 68%;
+  margin: 10px;
+  text-align: left;
+  color: #fff;
+  font-size: .8em;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.effect_click {
+  cursor: pointer;
+}
+
+.card.effect_click.flipped .card_front {
+  transform: rotateX(-180deg);
+}
+
+.card.effect_click.flipped .card_back {
+  transform: rotateX(0);
+}
+
+.card_header {
+  display: flex;
+  box-sizing:border-box;
+  width: 100%;
+  text-align: left;
+  padding-left: 2%;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5em;
+  z-index: 2;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.header_title {
+  align-self: flex-start;
+}
+
+.header_rating {
+  margin-left: auto;
+}
+
+.header_rating > img {
+  margin-right: 5px;
+  margin-top: 5px;
+  /* max-width: 40px; 
+  max-height: 40px; */
+}
+
+/* Fixing button click */
+.card_back_click {
+  height:85%;
+}
+
+/* Card Content, Backgrounds */
+.card_front {
+  /* background-repeat: no-repeat; */
+  background-position: center;
+}
+
+/* Responsive Stuff*/
+
+@media only screen and (min-width: 400px) {
+
+}
+
+@media only screen and (min-width: 800px) {
+  .card_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    min-width: calc(50% - 1rem);
+  }
+  
+}
+
+@media only screen and (min-width: 1200px) {
+  .card_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    min-width: calc(33% - 1rem);
+  }
+  
+}
+
+@media only screen and (min-width: 1600px) {
+  .card_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    min-width: calc(25% - 1rem);
+  }
+  
+}
